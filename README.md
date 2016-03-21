@@ -23,18 +23,21 @@ to have access to "Roboto" font face:
 * `roboto-fontface.css` - whole font family compiled to CSS
 * `roboto-fontface.scss` - whole font family in SCSS
 * `roboto-fontface.less` - whole font family in LESS
+* `roboto-fontface.styl` - whole font family in STYLUS
 
 Importing whole family may be unnecessary and lead to huge build, so if you are
-using SCSS or LESS, you can import only individual weights by importing one
+using SCSS or LESS or SYULUS, you can import only individual weights by importing one
 of the following files:
 
 * `roboto-fontface-(thin|light|regular|medium|bold|black).scss`
 * `roboto-fontface-(thin|light|regular|medium|bold|black).less`
+* `roboto-fontface-(thin|light|regular|medium|bold|black).styl`
 
 Their italic variants can be imported by adding `-italic` suffix:
 
 * `roboto-fontface-(thin|light|regular|medium|bold|black)-italic.scss`
 * `roboto-fontface-(thin|light|regular|medium|bold|black)-italic.less`
+* `roboto-fontface-(thin|light|regular|medium|bold|black)-italic.styl`
 
 ## Hinting
 

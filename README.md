@@ -8,10 +8,10 @@ Assuming you have [NodeJS](http://nodejs.org/), [NPM](https://www.npmjs.com/) an
 
 ```
 # install via NPM
-$ npm install roboto-fontface --save
+$ npm install roboto-fontface-pre-css --save
 
 # install via Bower
-$ bower install roboto-fontface --save
+$ bower install roboto-pre-css --save
 ```
 
 

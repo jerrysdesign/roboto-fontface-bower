@@ -1,5 +1,5 @@
 {
-  "name": "roboto-fontface",
+  "name": "roboto-fontface-pre-css",
   "version": "0.0.1",
   "description": "A simple package providing the Roboto fontface.",
   "main": "css/roboto-fontface.css",
@@ -24,6 +24,6 @@
   "devDependencies": {
     "less": "2.6.0",
     "node-sass": "3.4.2",
-    "gulp-stylus": "2.3.1"
+    "stylus": "0.54.2"
   }
 }

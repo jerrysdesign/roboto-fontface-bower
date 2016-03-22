@@ -10,3 +10,8 @@ for FILE in $DIR/css/*.scss; do
   echo "sass $FILE"
   node-sass "$FILE" >/dev/null
 done
+
+for FILE in $DIR/css/*.styl; do
+  echo "styl $FILE"
+  stylus "$FILE" >/dev/null
+done

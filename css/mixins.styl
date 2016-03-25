@@ -1,18 +1,33 @@
 $roboto-font-path = "../fonts"
+$font = Roboto
+$fontFamily = 'Roboto'
 
 roboto-font($type, $weight, $style)
     @font-face
-        font-family: 'Roboto'
-        src: url("{$roboto-font-path}/Roboto-{$type}.eot")
-        src: local("Roboto {$type}"), local("Roboto-{$type}"), url("{$roboto-font-path}/Roboto-{$type}.eot?#iefix") format("embedded-opentype"), url("{$roboto-font-path}/Roboto-{$type}.woff2") format("woff2"), url("{$roboto-font-path}/Roboto-{$type}.woff") format("woff"), url("{$roboto-font-path}/Roboto-{$type}.ttf") format("truetype"), url("{$roboto-font-path}/Roboto-{$type}.svg#Roboto") format("svg")
+        font-family: $fontFamily
+        $url = $roboto-font-path + '/' + $font + '-' + $type
+        src: url($url + '.eot')
+        src: local($fontFamily + ' ' + $type),
+             local($fontFamily + '-' + $type),
+             url($url + $eot + '?#iefix') format("embedded-opentype"),
+             url($url + 'woff2') format("woff2"),
+             url($url + 'woff') format("woff"),
+             url($url + '.ttf') format("truetype"),
+             url($url + '.svg#' + $font) format("svg")
         font-weight: $weight
         font-style: $style
-        
     @font-face
-        font-family: "Roboto-{$type}"
-        src: url("{$roboto-font-path}/Roboto-{$type}.eot")
-        src: local("Roboto {$type}"), local("Roboto-{$type}"), url("{$roboto-font-path}/Roboto-{$type}.eot?#iefix") format("embedded-opentype"), url("{$roboto-font-path}/Roboto-{$type}.woff2") format("woff2"), url("{$roboto-font-path}/Roboto-{$type}.woff") format("woff"), url("{$roboto-font-path}/Roboto-{$type}.ttf") format("truetype"), url("{$roboto-font-path}/Roboto-{$type}.svg#Roboto") format("svg")
+        font-family: $font + '-' + $type
+        $url = $roboto-font-path + '/' + $font + '-' + $type
+        src: url($url + '.eot')
+        src: local($fontFamily + ' ' + $type),
+             local($fontFamily + '-' + $type),
+             url($url + $eot + '?#iefix') format("embedded-opentype"),
+             url($url + 'woff2') format("woff2"),
+             url($url + 'woff') format("woff"),
+             url($url + '.ttf') format("truetype"),
+             url($url + '.svg#' + $font) format("svg")
 
- roboto-font-pair($type, $weight)
+roboto-font-pair($type, $weight)
     roboto-font($type, $weight, normal)
-    roboto-font(#{$type}Italic, $weight, italic)
+    roboto-font($type + 'Italic', $weight, italic)

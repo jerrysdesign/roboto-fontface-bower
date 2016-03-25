@@ -9,3 +9,5 @@ Thumbs.db
 
 # Sass-specific
 .sass-cache
+css/build
+gulpfile.js
